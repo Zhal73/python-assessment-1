@@ -204,12 +204,15 @@ def five(input):
 
 def six(input):
 	for i in range(len(input)):
-		if(input[i]=='i'):
-			if(input[i+1]=='e' and input[i-1]!='c'):
+		if(input[i] == 'c'):
+			test=input[i+1:i+3]
+			if test == 'ei':
 				return True
-			if(input[i-1=='e'and input[i-2]=='c']):
-				return True
+		if(input[i] == 'i' and input[i+1]=='e' and input[i-1] != 'c'):
+			return True
 	return False
+
+	
 
 
 	# <QUESTION 7>
