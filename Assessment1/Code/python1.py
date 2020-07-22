@@ -210,7 +210,7 @@ def six(input):
 			if(input[i-1=='e'and input[i-2]=='c']):
 				return True
 	return False
-print(six("glacier"))
+
 
 	# <QUESTION 7>
 
@@ -227,7 +227,13 @@ print(six("glacier"))
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def seven(input):
-    return 0
+	lower_input=input.lower()
+	count=0
+	vowels=['a','e','i','o','u']
+	for i in range(len(lower_input)):
+		if lower_input[i] in vowels:
+			count = count + 1
+	return count
 
 	# <QUESTION 8>
 
@@ -245,7 +251,10 @@ def seven(input):
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def eight(input):
-	return 1
+	total = 1
+	for i in range(1,input+1):
+		total = total * i
+	return total
 
 	# <QUESTION 9>
 
