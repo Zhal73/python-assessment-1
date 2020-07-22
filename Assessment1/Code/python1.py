@@ -275,7 +275,15 @@ def eight(input):
 	# Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
+	spaces = 0
+	for i in range(len(inputString)):
+		if(inputString[i]==" "):
+			spaces = spaces + 1
+			continue
+		if (char == inputString[i]): 
+			return i+1-spaces
 	return -1
+
 
 	# <QUESTION 10>
 
@@ -295,4 +303,10 @@ def nine(inputString, char):
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def ten(string, int, char):
+	string_lower=string.lower()
+	if(int > len(string_lower)):
+		return False
+	else:
+		if(string_lower[int-1] == char):
+			return True
 	return False
